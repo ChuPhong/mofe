@@ -37,3 +37,13 @@ export const getters = {
         };
     }
 };
+
+export const actions = {
+    async upView({ state }) {
+        const { id, views } = state.music;
+        const response = await this.$axios.patch(`songs/${id}`, {
+            views: views + 1
+        });
+        return response;
+    }
+};

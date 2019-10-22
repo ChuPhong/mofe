@@ -1,6 +1,23 @@
 import Vue from 'vue';
-import { ConfigProvider, Layout, Row, Col, Menu, Icon, Avatar, Card, Button, Input, Table, Spin, List, Affix } from 'ant-design-vue';
+import {
+    LocaleProvider,
+    ConfigProvider,
+    Layout,
+    Row,
+    Col,
+    Menu,
+    Icon,
+    Avatar,
+    Card,
+    Button,
+    Input,
+    Table,
+    Spin,
+    List,
+    Affix
+} from 'ant-design-vue';
 
+Vue.use(LocaleProvider);
 Vue.use(ConfigProvider);
 Vue.use(Layout);
 Vue.use(Row);

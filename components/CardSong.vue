@@ -9,7 +9,7 @@
                 <template v-for="(artist, index) in song.artists">
                     <NuxtLink
                         :key="artist + new Date().getUTCMilliseconds()"
-                        :to="'/artist/' + slugify(artist)"
+                        :to="`/nghe-si/${slugify(artist)}`"
                         class="text-gray-600 hover:text-green"
                         >{{ artist }}</NuxtLink
                     ><span :key="index + new Date().getUTCMilliseconds()" class="text-gray-600">{{

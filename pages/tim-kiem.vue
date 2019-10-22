@@ -4,10 +4,10 @@
             <div class="text-2xl md:text-3xl capitalize mb-3">Tìm Kiếm</div>
         </ACol>
         <ACol :xs="24">
-            <InputSearch :search="search" />
+            <InputSearch :search="search" placeholder="Nhập thông tin bài hát, ca sĩ muốn tìm kiếm..." />
         </ACol>
-        <ACol :xs="24">
-            <AList>
+        <ACol v-if="songs" :xs="24">
+            <AList :locale="{ emptyText: 'Không tìm thấy bài hát, ca sĩ tương ứng.' }">
                 <AListItem v-for="song in songs" :key="song.id">
                     <AListItemMeta :description="[...song.artists].map((ar) => ar.name).join(', ')">
                         <NuxtLink slot="title" :to="`bai-hat/${slugify(song.name)}/${song.id}`">{{ song.name }}</NuxtLink>
